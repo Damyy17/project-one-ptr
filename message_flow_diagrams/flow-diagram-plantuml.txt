@@ -1,0 +1,8 @@
+@startuml
+!theme vibrant
+Docker -> ReaderActor : SSE Stream
+ReaderActor -> LoadBalancer : Parsed Json
+LoadBalancer -> ActorPool: Message
+ReaderActor -> HashTagActor : Parsed Json
+ActorPool -> PrinterActor: Message
+@enduml

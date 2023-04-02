@@ -1,0 +1,12 @@
+@startwbs
+!theme vibrant
+* Main Supevisor
+** Reader Actor 1
+** Reader Actor 2
+** Load Balancer
+** Actor Pool
+*** Printer Actor 1
+*** Printer Actor 2
+*** Printer Actor 3
+** Hashtag Actor
+@endwbs
