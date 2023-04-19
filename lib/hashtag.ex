@@ -32,7 +32,7 @@ defmodule Htag do
     hashtag_map = Enum.frequencies(hashtag_list)
     sorted_hashtags = Enum.sort_by(hashtag_map, & &1 |> elem(1)) |> Enum.reverse()
     most_common_hashtag = List.first(sorted_hashtags) |> elem(0)
-    IO.puts("Most popular hashtag: #{most_common_hashtag}")
+    # IO.puts("Most popular hashtag: #{most_common_hashtag}")
     start_timer()
   end
 

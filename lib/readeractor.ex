@@ -35,8 +35,10 @@ defmodule ReaderActor do
       [_, json] ->
         case Poison.decode(json) do
           {:ok, result} ->
-            # send(LoadBalancer, result)
-            send(Htag, result)
+            send(LoadBalancer, result)
+            # send(Htag, result)
+            # worker_manager_pid = Process.whereis(WorkerManager)
+            # send(worker_manager_pid, {:new_task})
             {:noreply, url}
           _ -> {:noreply, url}
         end

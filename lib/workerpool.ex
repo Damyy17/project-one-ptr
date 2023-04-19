@@ -20,7 +20,7 @@ defmodule PrinterPool do
       %{
         id: :printer3,
         start: {PrinterActor, :start_link, [:printer3, 50]}
-      }
+      },
     ]
 
     Supervisor.init(children, strategy: :one_for_one)
